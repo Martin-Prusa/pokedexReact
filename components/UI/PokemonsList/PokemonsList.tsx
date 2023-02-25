@@ -29,14 +29,15 @@ export const PokemonsList = () => {
         return []
     }
 
+    const canNext = () => !error && !isLoading && data.next
+    const canPrev = () => !error && !isLoading && data.previous
+
     const next = () => {
-        if(!error && !isLoading && data.next)
-        setUrl(data.next)
+        if(canNext()) setUrl(data.next)
     }
 
     const prev = () => {
-        if(!error && !isLoading && data.previous)
-        setUrl(data.previous)
+        if(canPrev()) setUrl(data.previous)
     }
 
     return (
@@ -50,12 +51,12 @@ export const PokemonsList = () => {
 
             </div>
             <div className="flex justify-center">
-                <button onClick={prev} type="button"
-                        className="mx-5 inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                <button onClick={prev} disabled={!canPrev()} type="button"
+                        className="mx-5 inline-flex items-center rounded-md border border-transparent bg-indigo-600 disabled:bg-indigo-400 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                     Prev
                 </button>
-                <button onClick={next} type="button"
-                        className="mx-5 inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                <button onClick={next} disabled={!canNext()} type="button"
+                        className="mx-5 inline-flex items-center rounded-md border border-transparent bg-indigo-600 disabled:bg-indigo-400 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
                     Next
                 </button>
             </div>
