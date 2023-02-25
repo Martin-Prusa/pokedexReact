@@ -52,17 +52,17 @@ export const PokemonsList = () => {
             </div>
             <div className="flex justify-center">
                 <button onClick={prev} disabled={!canPrev()} type="button"
-                        className="mx-5 inline-flex items-center rounded-md border border-transparent bg-indigo-600 disabled:bg-indigo-400 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                        className="mx-5 inline-flex items-center rounded-md border border-transparent bg-[#FEF2A4] disabled:bg-[#fffbdb] px-4 py-2 text-base font-medium  shadow-sm hover:bg-[#ffef8a] focus:outline-none focus:ring-2 focus:ring-[#FEF2A4] focus:ring-offset-2">
                     Prev
                 </button>
                 <button onClick={next} disabled={!canNext()} type="button"
-                        className="mx-5 inline-flex items-center rounded-md border border-transparent bg-indigo-600 disabled:bg-indigo-400 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                        className="mx-5 inline-flex items-center rounded-md border border-transparent bg-[#FEF2A4] disabled:bg-[#fffbdb] px-4 py-2 text-base font-medium  shadow-sm hover:bg-[#ffef8a] focus:outline-none focus:ring-2 focus:ring-[#FEF2A4] focus:ring-offset-2">
                     Next
                 </button>
             </div>
             <div className="flex justify-center my-5">
                 <button onClick={() => setUrl(baseUrl)} type="button"
-                        className="mx-5 inline-flex items-center rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2">
+                        className="mx-5 inline-flex items-center rounded-md border border-transparent bg-[#FEF2A4] disabled:bg-[#fffbdb] px-4 py-2 text-base font-medium  shadow-sm hover:bg-[#ffef8a] focus:outline-none focus:ring-2 focus:ring-[#FEF2A4] focus:ring-offset-2">
                     First Page
                 </button>
             </div>
