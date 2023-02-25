@@ -4,5 +4,5 @@ export interface PokeDetailProps {
     types: string[]
     weight: number
     height: number
-    description: string
+    stats: {name: string, value: number}[]
 }

@@ -21,10 +21,12 @@ export default function Detail() {
             name: data.name,
             weight: data.weight,
             height: data.height,
-            description: 'Nevim',
+            stats: data.stats.map((stat: any) => {
+                return {name: stat.stat.name, value: stat.base_stat}
+            }),
             types: data.types.map((type: {type: {name: string}}) => type.type.name)
         }
-        return {img: '', name: '', weight: 0, height: 0, description: '', types: []};
+        return {img: '', name: '', weight: 0, height: 0, types: [], stats: []};
     }
 
     return (
